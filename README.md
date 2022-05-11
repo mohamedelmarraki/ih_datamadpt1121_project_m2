@@ -1,81 +1,124 @@
+# __Diamonds Selection Tool__
 
-# __ih_datamadpt1121_project_m2__
+<p align="center"><img src="https://c.tenor.com/Ay4jVLEIo2oAAAAC/diamonds-sparkle.gif"></p>
 
-![Image](https://ychef.files.bbci.co.uk/976x549/p02b5zm9.jpg)
+
+
+## **Introduction**
 
 Data analytics is oftentimes referred to as business intelligence, BI development, or product analytics. However, that is just the tip of the iceberg since the data analytics process includes activities such as data formation/creation, data cleansing, exploratory data analysis (especially this part), feature engineering, and interpretation of suggestions/predictions/results derived from advanced modelling analysis (i.e.: Machine Learning).
 
-For this project you will perform some of these activities in order to analyse the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/db/diamonds_m2.db) `SQLite` database.
 
+<p align="center"><img src="https://www.era-environmental.com/hs-fs/hubfs/ETL-era-environmetal-management.png?width=566&name=ETL-era-environmetal-management.png"></p>
+
+
+
+## **Project Description**
+This is part of Ironhack Data Analytics Bootcamp. The main goal is to build a complete ETL given a database.
+
+For this project we will perform some of these activities in order to analyse the [__diamonds_m2.db__](https://github.com/ivanrepi/data_visualization_project_m2/blob/master/db/diamonds_m2.db) `SQLite` database.
+
+
+### :computer: **Dependencies**
+
+- This repository is tested on **Python 3.7+**.
+
+- Install [pandas](https://pandas.pydata.org/docs/user_guide/index.html) library. Copy and paste next command in your master branch to install it:
+    ```
+    conda install pandas
+    ```
+- Install [numpy](https://numpy.org/doc/stable/) library. Copy and paste next command in your master branch to install it:
+    ```
+    conda install numpy
+    ```
+- Install [SQLite](https://www.sqlite.org/index.html). Copy and paste next command in your master branch to install it:
+    ```
+    conda install -c anaconda sqlite
+    ```
+- Install [SQLAlchemy](https://www.sqlalchemy.org/library.html) library. Copy and paste next command in your master branch to install it:
+    ```
+    conda install -c anaconda sqlalchemy
+    ```
+
+> __IMPORTANT NOTE:__ BI Report have been made with __Tableau__. Account is not needed for visualization. If edit permissions are needed, contact with the administrator.
+
+---
+
+## :clipboard: **Overview:**
+
+
+### **Part 1: Data Exploration and Preparation**
+
+#### _Context_
+This classic dataset contains the prices and other attributes of almost 54,000 diamonds. 
+
+The goal of this challenge is to perform an __exploratory analysis__ in order to gain initial insight on our diamonds database and prepare the __data model__ that better fits your visualizations. 
+
+The ETL process have been done with Python, Pandas, Numpy, SQLite and SQLAlchemy libraries.
+
+All data exploration and preparation, can be found in the [__main.ipynb__](https://github.com/ivanrepi/data_visualization_project_m2/blob/master/db/main.ipynb) file.
+
+<p align="center"><img src="https://www.datasciencecentral.com/wp-content/uploads/2021/10/2808308206.jpeg"></p>
+
+
+
+
+
+### **Challenge 2: Diamanond Selection Dashboard**
+
+#### :point_right: **Understanding the data**
+
+
+#### _Content_
+- PRICE: in US dollars (\$326--\$18,823)
+
+- CARAT: weight of the diamond (0.2--5.01)
+
+- CUT: quality of the cut (Fair, Good, Very Good, Premium, Ideal)
+
+- COLOR: diamond colour, from J (worst) to D (best)
+
+- CLARITY a measurement of how clear the diamond is:
+
+        I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best)
+
+- DIMENSIONS: 
+
+        x length in mm (0--10.74)
+        y width in mm (0--58.9)
+        z depth in mm (0--31.8)
+
+- DEPTH: total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43--79)
+
+- TABLE WIDTH: table width of top of diamond relative to widest point (43--95)
+
+<p align="center"><img src="https://media1.giphy.com/media/G1ifnX4d5tYFACktp9/giphy.gif?cid=ecf05e47q64hy96srwoigwl4heg1mht7nlfzast7g861hauq&rid=giphy.gif&ct=g"></p>
+
+
+
+#### :bar_chart: **Dashboard**
+
+
+Click [__HERE__](https://public.tableau.com/app/profile/ivan.repilado/viz/diamonds_selection/Diamondsselection?publish=yes) to go to Diamonds Selection Tool visualization.
+
+
+---
+
+
+### :file_folder: **Folder structure**
 
 ```
-conda install -c anaconda sqlite
+└── ih_datamadpt1121_project_m2
+    ├── project
+        ├── diamonds.ipynb
+    ├── data
+        ├── diamonds_m2.db
+        ├── diamonds.csv
+    ├── images
+    ├── README.md
+    ├── URL Tableau.txt
 ```
 
-
+> Do not forget to include `__trash__` and `.env` in `.gitignore` 
+&nbsp;
 ---
-
-
-
-## **Deliverables:**
-
-A GitHub repository including:
-
-- `exploratory analysis` files that holds the results of __Challenge 1__. 
-
-- `BI Report/Dashboard` meeting the requeriments specified in __Challenge 2__.
-
-- `README.md` file explaining the job done and your main conclusions. You may find more info of how to build a README file [here](https://github.com/potacho/data-project-template/blob/master/README.md).
-
-
-
----
-
-
----
-
-
-
-## __Challenge 1: Data Exploration and Preparation__
-
-The goal of this challenge is to perform an __exploratory analysis__ in order to gain initial insight on our diamonds database and prepare the __data model__ that better fits your visualizations. You may use any ETL tool from those explained in class (i.e.: Pandas, PowerQuery, Tableau Public). 
-
-<p align="center"><img src="https://media.giphy.com/media/iP1qEUE7VKhLq/giphy.gif"></p>
-
-> **IMPORTANT NOTE:** You may use any tool and/or workflow that you find more convenient in order to provide the requested output. 
-
-
-
----
-
-
-
-## **Challenge 2: BI Report/Dashboard**
-
-BI Reports and Dashboards are powerful tools for communicating important information __at-a-glance__. The goal of this challenge is to build a BI Report/Dashboard using our diamonds database that will help the final user (i.e.: yourself) to perform better during _Module 3 project (Kaggle Competition)_. 
-
-> __Tip:__ you should first consider which data and which indicators should be put on the BI Report/Dashboard. Then, decompose the key indicators from multiple dimensions. 
-
-<p align="center"><img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif"></p>
-
-
-A BI Report/Dashboard is not exactly a sequential set of descriptive charts like those you have may built in challenge 1 during the analysis. Instead, a BI Report/Dashboard should be __a single interactive interface built around a specific objetive and which components are logically arranged in order to provide data relevant insights effectively__. Therefore, bear in mind the main objective of the competition: _understand the relationship between diamonds attributes (features) or group of attributes, and its price_.
-
-
-
----
-
-
-
-## **References:**
-
-
-- [SQLite](https://www.sqlite.org/index.html)
-
-- [SQLAlchemy](https://docs.sqlalchemy.org/en/14/core/engines.html)
-
-- [Visual Analysis Best Practices](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/images/visual-analysis-guidebook.pdf)
-
-- [Pandas Visualization](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)
-
-- [Tableau](https://github.com/ih-datapt-mad/dataptmad1121_lessons/blob/main/module-2/visualization_tableau.md)
